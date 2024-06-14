@@ -1,0 +1,23 @@
+[package]
+name = "zg-da-client"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+async-trait = { workspace = true }
+color-eyre = { workspace = true }
+da-client-interface = { workspace = true }
+starknet = { workspace = true }
+utils = { workspace = true }
+tonic = { version = "0.11.0", features = ["gzip", "tls", "tls-roots", "tls-roots-common", "tls-webpki-roots"] }
+tonic-build = "0.11.0"
+futures = "0.3.30"
+tokio = { version = "1.35.1", features = ["full", "sync"] }
+prost = "0.12.3"
+hex = "0.4"
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+[build-dependencies]
+tonic-build = "0.11.0"
+color-eyre = { workspace = true }
